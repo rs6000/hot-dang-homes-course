@@ -3,8 +3,14 @@ import Image from "next/image";
 export const Cover = ({ children, background }) => {
   return (
     <div
-      className="h-screen bg-slate-800 relative min-h-[400px]
-    justify-center items-centers 
+      className="h-screen
+       text-white
+        bg-slate-800
+         relative min-h-[400px]
+         flex
+         items-center
+         justify-center
+         
     "
     >
       <Image
@@ -14,7 +20,13 @@ export const Cover = ({ children, background }) => {
         objectFit="covers"
         className="mix-blend-soft-light"
       />
-      {children}
+      <div
+        className="max-w-5xl
+      z-10
+      "
+      >
+        {children}
+      </div>
     </div>
   );
 };
